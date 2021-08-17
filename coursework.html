@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <title>VT Coursework - Jacob Summers</title>
+    <link href="main.css" rel="stylesheet" type ="text/css"/>
+    <script src="js/buttonscript.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Jacob Summers Computer Science Portfolio</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coursework.html">VT Coursework</a></li>
+          <li><a href="projects.html">Personal Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Computer Science Courses Information -->
+    <h2>Computer Science Courses</h2>
+    <p class="classlist">These are the following Computer Science courses I have taken at Virginia Polytechnic Institute and State University</p>
+    <ul class="classlist">
+      <li>CS 2114 - Software Design and Data Structures</li>
+      <li><Strong>CS 2104 - Intro to Problem Solving in CS</Strong></li>
+      <li><Strong>CS 2505 - Intro Computer Organization I</Strong></li>
+      <li>CS 2506 - Intro Computer Organization II</li>
+      <li>CS 3114 - Data Structures and Algorithms</li>
+      <li>CS 3714 - Mobile Software Development</li>
+      <li>CS 3214 - Computer Systems - In Progress</li>
+      <li>CS 3304 - Comparative Languages - In Progress</li>
+      <li>CS 3604 - Professionalism in Computing - In Progress</li>
+    </ul>
+    <p class="classlist"><Strong>(Teaching Assistant)</Strong></p>
+    <h2>Math and Technical Courses</h2>
+    <p class="classlist">These are the following Math and Technical courses I have taken at Virginia Polytechnic Institute and State University</p>
+    <ul class ="classlist">
+      <li>COMM 2004 - Public Speaking</li>
+      <li>ENGL 3764 - Technical Writing</li>
+      <li>MATH 2204 - Intro Multivariable Calculus</li>
+      <li>MATH 2114 - Introduction to Linear Algebra</li>
+      <li>MATH 2534 - Intro Discrete Math</li>
+      <li>MATH 3134 - Applied Combinatorics</li>
+    </ul>
+
+    <h2>Major Course Projects (Click Buttons for More Information)</h2>
+
+
+    <!--Space colonies information here -->
+    <div class="classproject">
+      <h3>CS 2114 Space Colonies</h3>
+      <button id="spacebutton" onclick="clickHandler('#spacebutton', 'space')">Click Me!</button>
+
+      <p class ="space">The purpose of this project was to utilize different data types and data structures taught throughout the semester in order to create a system that assists in the process of placing applicants in homes on colonies in outer space. People were placed on certain planets based on their 3 skill traits (MEDICINE,  AGRICULTURE, and TECHNOLOGY) and their personal planet preferences. If there was room on the requested planet, then the program compared the person’s scores against the planet’s minimum requirements and made the decision to allow the user to accept or reject their application. If the person had no colony request, the user would be given the option to accept or decline the person for the planet colony with the most available space whose minimum requirements were suitable. If the person did not qualify for their planet preference, then they were rejected.<br><br>The Circular Array Queue Data Structure was used to keep track of the people who were waiting in line to be accepted or rejected from the planet. Other data types were utilized to represent the different characteristics of the program such as a Person data type, a Skills data type, and a Planet data type.</p>
+      <img src="CourseworkScreenshots/CS2114/Spacecolony.PNG" class="space doublepicture"/>
+      <img src="CourseworkScreenshots/CS2114/ApplicantsProcessed.PNG" class="space doublepicture"/>
+
+    </div>
+    <!--GIS system for C language information here -->
+    <div class="classproject clear">
+      <h3>CS 2505 GIS System in C</h3>
+      <button id="giscbutton" onclick="clickHandler('#giscbutton', 'gisc')">Click Me!</button>
+      <p class ="gisc">The purpose of this project was to put together different C concepts taught throughout the semester in order to create a program that indexed and provided search features for a
+    file of GIS records.<br><br>
+
+    The resulting system had to support the following operations:<br>
+    1. Retrieve data for all GIS records matching a given feature
+    name and state.<br>
+    2. Retrieve data for the unique GIS record matching a given feature ID.<br>
+    3. Report the orthodromic distance between two features
+    specified by their feature IDs.<br>
+    4. Display the in-memory indices in a human-readable manner.<br><br>
+
+    The program began by parsing the provided script file in order to insert the correct GIS records into the hash table used for indexing the feature names and the array for the feature id indexing. After that, the program parses out the commands from the command script and prints out their outputs into seperate
+    log files.<br>
+      </p>
+      <img src="CourseworkScreenshots/GIS2505/Existencesearches.PNG" class="gisc multiplepictures"/>
+      <img src="CourseworkScreenshots/GIS2505/Detailsearches.PNG" class="gisc multiplepictures"/>
+      <img src="CourseworkScreenshots/GIS2505/DistanceBetween.PNG" class="gisc multiplepictures"/>
+    </div>
+    <!--GIS system for Java language here -->
+    <div class="classproject clear">
+      <h3>CS 3114 GIS System in Java</h3>
+      <button id="gisjbutton" onclick="clickHandler('#gisjbutton', 'gisj')">Click Me!</button>
+      <p class ="gisj">The purpose of this project was to develop a system that indexed and provided search features for a file of GIS records by using the data structures taught throughout the semester.<br><br>
+
+        The resulting system had to support the following operations:<br><br>
+
+        - Import new GIS records into the database file based off the criteria provided in the script file<br>
+        - Retrieve data for all GIS records matching given geographic coordinates<br>
+        - Retrieve data for all GIS records matching a given feature name and state<br>
+        - Retrieve data for all GIS records that fall within a given (rectangular) geographic region<br>
+        - Display the in-memory indices in a human-readable manner<br><br>
+
+        In order to complete these tasks, the system needed to implement a name index and a coordinate index that contained the GIS records that were from the constructed database file. The name index used a hash table to store a feature name and state abbreviation and the
+        file offset(s) of the matching record(s). The coordinate index used a bucket PR quadtree to store the geographic coordinates and offsets of the GIS records in the database file.<br><br>
+
+        In addition to this, a LRU buffer pool was used to store GIS records so that search results may be read from DRAM rather than the disk (the database file). This was implemented so that the program executed faster by not having to spend as much time having to retrieve records that were already read from the disk as opposed to finding the record in the DRAM.<br>
+      </p>
+
+      <img src="CourseworkScreenshots/GIS3114/what_is_at.PNG" class="gisj multiplepictures"/>
+      <img src="CourseworkScreenshots/GIS3114/what_is.PNG" class="gisj multiplepictures"/>
+      <img src="CourseworkScreenshots/GIS3114/what_is_in.PNG" class="gisj multiplepictures"/>
+    </div>
+
+    <!--Hokie Movie Finder information here -->
+    <div class="classproject clear">
+      <h3>CS 3714 Hokie Movie Finder</h3>
+      <button id="moviebutton" onclick="clickHandler('#moviebutton', 'moviefinder')">Click Me!</button>
+      <p class ="moviefinder">The purpose of this app was to incorporate android components taught throughout the semester in order to develop an app of our choosing. The name of my android application was the Hokie Movie Finder. This application aimed to accomplish the task of finding today’s movies that are playing in the city of Blacksburg and displaying the showtimes of the theaters they are playing in.<br>
+      </p>
+      <a href="https://youtu.be/IZ-I79J88ws" target="_blank" class = "moviefinder link">Click the video to learn more<br><br></a>
+    </div>
+    <p id="demo"></p>
+      <footer class="clear"><strong>Phone: 703-606-3726. Email: jacobps@vt.edu. Visit Contact Page for More Info</strong><footer>
+  </body>
+</html>

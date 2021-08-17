@@ -1,0 +1,207 @@
+/*
+HTML formatting
+*/
+hmtl {
+  min-height: 100%;
+}
+
+/*
+Body background formatting
+*/
+body {
+
+  height: 100%;
+  background: rgb(226,226,226);
+  background: radial-gradient(circle, rgba(226,226,226,1) 54%, rgba(192,192,192,1) 88%);
+
+}
+
+/*
+Implementation of Classwork classes
+*/
+.space, .gisc, .gisj, .moviefinder {
+  display: none;
+}
+
+/*
+Implementation of project classes
+*/
+.tic, .weight, .metacritic {
+  display:none;
+
+}
+
+/*
+Link formatting
+*/
+.link {
+  text-align: center;
+}
+
+/*
+Paragraph formatting
+*/
+p.information{
+  text-align: center;
+}
+
+/*
+Heading formatting
+*/
+h2, h3, p.classlist{
+  text-align:center;
+
+}
+
+/*
+a href formatting
+*/
+a.outerlinks{
+  display:block;
+  text-align: center;
+}
+
+/*
+Button formatting
+*/
+button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*
+Unordered list for Classes formatting
+*/
+ul.classlist{
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/*
+Class project formatting
+*/
+.classproject {
+  text-align:left
+}
+
+/*
+Header formatting
+*/
+header {
+  background: #a6a6a6;
+  color: black;
+  padding: 15px 15px 0 15px;
+
+}
+
+/*
+H1 in header formatting
+*/
+header h1 {
+    margin: 0;
+    display: inline;
+}
+
+/*
+Navigation unordered list item formatting
+*/
+nav ul li {
+  background:#dedede;
+  color: black;
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+/*
+Navigation unordered formatting
+*/
+nav ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+  display: inline;
+}
+
+/*
+Navigation unordered list item link formatting
+*/
+nav ul li a {
+  color: black;
+}
+
+/*
+Bio picture formatting
+*/
+.biopicture {
+  position:relative;
+  float:left;
+  width: 20%;
+  height:20%;
+}
+
+/*
+Nature piture formatting
+*/
+.naturepicture {
+  position:relative;
+  float:right;
+  width: 30%;
+  height:30%;
+}
+
+/*
+Three pictures formatting
+*/
+.multiplepictures {
+  position:relative;
+  float:left;
+  width: 33%;
+  height:33%;
+}
+
+/*
+Resume picture formatting
+*/
+.resumepic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+/*
+Two pictures formatting
+*/
+.doublepicture {
+  position: relative;
+  float:left;
+  width: 50%;
+  height: 33%;
+}
+
+/*
+Navigation unordered list item formatting
+*/
+.blankspace{
+  float:left;
+  width: 0px;
+  height:0px;
+}
+
+/*
+Clear class for Floats
+*/
+.clear {
+  display: block;
+  clear: both;
+}
+
+/*
+Footer formatting
+*/
+footer {
+  text-align: center;
+}

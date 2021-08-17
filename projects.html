@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Projects - Jacob Summers</title>
+    <link href="main.css" rel="stylesheet" type ="text/css"/>
+    <script src="js/buttonscript.js">
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <h1>Jacob Summers Computer Science Portfolio</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coursework.html">VT Coursework</a></li>
+          <li><a href="projects.html">Personal Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Personal Project Information -->
+    <h2>Personal Projects</h2>
+      <p class="information">For more information or access to these projects, please visit my GitHub account in the Contact page.</p>
+
+      <!--Tic-Tac-Toe Board Information -->
+      <h3>Tic-Tac-Toe on Android Studio</h3>
+        <button id="ticbutton" onclick="clickHandler('#ticbutton', 'tic')">Click Me!</button>
+        <p class = "tic">The idea for this project came to me one day when I was watching my little brothers play tic-tac-toe at the house. I thought to myself how could I create a more entertaining way to play tic-tac-toe? As a result, I created an Android application with a simple GUI that contained three playable versions of tic-tac-toe with support for landscape and portrait orientations, and used saved preferences to keep track of light/dark modes for a more user-customized experience.
+          <br><br>
+          The application contained a ViewModel that contained the information on the game mode selected and the boards used to make sure that the UI could find their references during screen rotation or other life-cycle ‘inducing’ events. In addition, the application consisted of many fragments to display the different aspects of the app such as the title screen, the display of the single tic-tac-toe board, and the display of the triple tic-tac-toe boards.
+          <br><br>
+          In terms of implementing the logic behind the game, a custom data type named TicTacToeBoard represented a tic-tac-toe board and a custom data type named GameSymbol represented the player symbols. Inside of the tic-tac-toe data type was an encapsulated 2D array that represented the abstract dimensions of the board and the methods for adding the entries and checking to see if there was a three-in-a-row.
+          <br><br>
+          In terms of the visuals for the game modes, the board layouts consisted of a Table with TextViews that updated upon clicking to the right symbol. For the triple board game mode, a RecyclerView displayed the list of the boards to conserve memory.
+        </p>
+        <a href="https://youtu.be/JmInUFvuWoU" target="_blank" class ="tic link">Click here for the demo</a>
+
+      <!--Barbell Weight Calculator Information -->
+      <h3>Barbell Weight Calculator</h3>
+        <button id="weightbutton" onclick="clickHandler('#weightbutton', 'weight')">Click Me!</button>
+        <p class = "weight">The idea for my Barbell Weight Calculator came to me one day when I was lifting weights at my college gym. After setting a personal record on the bench press, I wanted to calculate exactly how much weight I had just benched. As a result, I developed an application that not only calculated lifts, but also calculated the possible weight combinations required to reach a specific lift target. In addition to calculating these weights, I also developed an Android Room Database that allowed for storing the calculated lifts. <br><br>
+
+        The application contained ViewModels that conducted the calculations and stored the database entries so that the UI could find their references during screen rotation or other life-cycle ‘inducing’ events. As mentioned earlier, the application also contained a Room Database that stored the user’s custom workouts and their exercises. In addition, the application consisted of many fragments to display the different aspects of the app such as the title screen, the display of the calculations, and the display of the workouts and their exercises. <br><br>
+
+        Two custom data types were implemented in order to properly display and save the weight calculations. The first data type implemented was an Exercise data type that stored the name of the exercise, the weight combination associated with it, a boolean that indicated whether the weight of the bar was included in the calculation or not, the weight of the total lift, and the weight of the bar used in the lift. The second data type implemented was a Workout data type that stored the name of the workout and the list of exercises associated with the workout.<br><br>
+
+        In order to calculate every possible weight combination for a certain lift weight, a combination algorithm I had implemented prior to the project was used to go through every possible combination of the list of weights that equaled the targeted lift weight. The algorithm incorporated the use of recursion to reduce the weight list in order to go through every element of the weight list. The algorithm also had to incorporate a restriction array that kept track of the number of weights that were allowed to be used in the combinations based on user input from the calculation component of the application.
+
+      </p>
+      <a href="https://youtu.be/T-5aogFyXCM" target="_blank" class ="weight link">Click here for the demo</a>
+
+    <!--Metacritic Webscrape Information -->
+    <h3>Metacritic Webscrape</h3>
+
+      <button id= "metacriticbutton" onclick="clickHandler('#metacriticbutton', 'metacritic')">Click Me!</button>
+      <p class = "metacritic">The idea for my Metacritic webscraper came from after doing research on the available html
+        parser packages on Python. After learning about Beautiful Soup and Mechanical Soup, I decided
+      to see what I could parse from Metacritic, a website that aggregates reviews of films, tv shows,
+      albums, and video games that happens to be one of my favorite websites to browse. After doing
+      research on Metacritic and webscrapping, I found that many had already used Beatiful Soup and
+      Mechanical Soup to parse html and submit forms and queries to the website. At that point, I decided
+      I would try and create my own program that acted as a webscraper for Metacritic rather than duplicating
+      what had already been done before. As I was looking through the HTML code of Metacritic, I realized that
+      I could use Python's built in String methods in order to parse the details that I wanted. I ended up creating
+      a program written in Python that prompted the user to search for a tv show, movie, album, or video game on Metacritic in order to
+      view its Metascore (aggregate critic rating), its miscellaneous details such as the name, summary, and the people who worked on it,
+      and its user reviews. <br><br>
+
+      The program consisted of four different packages that were dedicated to the different parsings and user inputs for the movies, tv shows,
+      video games, and albums available on the website. In addition to those packages, there was a package dedicated to the
+      parser objects required for parsing and navigating the search results on the search result pages and a package that prompted the user to choose
+      the search result they wished to view.<br><br>
+
+      Throughout the program, Python's String splicing and find methods were used to find and extract key words in the html code.
+      In order to get the html code from a given page, Python's urllib package was used to send requests to
+      Metacritic's servers in order to recieve it's utf-8 encoded html code.<br><br>
+      </p>
+
+      <!--Software Engineer Filter Information -->
+      <h3>Software Engineer Job Filter (Work In Progress)</h3>
+
+
+    <footer><strong>Phone: 703-606-3726. Email: jacobps@vt.edu. Visit Contact Page for More Info</strong><footer>
+
+  </body>
+
+</html>
